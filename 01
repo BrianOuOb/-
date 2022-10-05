@@ -1,0 +1,32 @@
+class Cal_area
+{
+  double pi=3.14159;
+   double radius = 10.0;
+   int length = 4;
+   int width = 5;
+   int height = 6;
+
+  void show_periphery()
+ {
+   System.out.println("半徑= 10");
+   System.out.println("球形體積="+ (4*pi*radius*radius*radius)/3);
+   System.out.println("長="+length);
+   System.out.println("寬="+width);
+   System.out.println("高="+height);
+   System.out.println("表面積="+(length*width*2+height*width*2+height*length*2));
+   
+
+ }
+}
+public class Main
+{
+
+ public static void main(String args[])
+ {
+	 Cal_area cirl1=new Cal_area();
+	
+	 cirl1.show_periphery();
+  
+ }
+
+}
