@@ -1,0 +1,40 @@
+package com.example.watermidtermexam;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void button_Click (View view){
+        TextView outputT = (TextView) findViewById(R.id.outputTotal);
+        String str = "";
+        CheckBox onehundred=(CheckBox)findViewById(R.id.checkBox1);
+        if (onehundred.isChecked())
+            str += onehundred.getText() + "\n";
+        CheckBox twohundred=(CheckBox)findViewById(R.id.checkBox2);
+        if (twohundred.isChecked())
+            str += twohundred.getText() + "\n";
+        CheckBox threehundred=(CheckBox)findViewById(R.id.checkBox3);
+        if (threehundred.isChecked())
+            str += threehundred.getText() + "\n";
+        CheckBox fourhundred=(CheckBox)findViewById(R.id.checkBox4);
+        if (fourhundred.isChecked())
+            str += fourhundred.getText() + "\n";
+        CheckBox fivehundred=(CheckBox)findViewById(R.id.checkBox5);
+        if (fivehundred.isChecked())
+            str += fivehundred.getText() + "\n";
+        outputT.setText(str);
+    }
+
+}
